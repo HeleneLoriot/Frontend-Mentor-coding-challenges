@@ -1,0 +1,207 @@
+:root {
+    /* primary */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    /* neutral */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --spartan:'Spartan', sans-serif;
+}
+
+/* style: mobile first */
+body {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--spartan);
+    background: top 0 left 0 no-repeat url(./images/bg-pattern-top-mobile.svg), bottom 0 right 0 no-repeat url(./images/bg-pattern-bottom-mobile.svg);
+}
+
+.header {
+    margin-bottom: 1.8rem;
+}
+
+.header__title {
+    text-align: center;
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+    font-size: 2em;
+    padding: 5rem 1.5rem 1rem 1.5rem;
+}
+
+.header__content {
+    text-align: center;
+    padding: 1em;
+    color: var(--dark-grayish-magenta);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.grade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.grade-card {
+    text-align: center;
+    background-color: var(--light-grayish-magenta);
+    width: 90%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.grade-card__stars {
+    margin-bottom: 1rem;
+}
+
+.grade-card__label {
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.comments-card {
+    background-color: var(--very-dark-magenta);
+    color: var(--white);
+    width: 90%;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.comments-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.comments-card__img {
+    border-radius: 50%;
+    height: 3rem;
+    margin-right: 1.5rem;
+}
+
+.comments-card__title {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.comments-card__subtitle {
+    color: var(--soft-pink);
+    font-size: .9em;
+}
+
+.comments-card__content {
+    font-size: .9em;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.attribution {
+font-size: 11px;
+text-align: center;
+}
+
+.attribution a {
+color: hsl(228, 45%, 44%);
+}
+
+
+/* style for desktop */
+@media (min-width: 1440px) {
+
+    body {
+        background: top 0 left 0 no-repeat url(./images/bg-pattern-top-desktop.svg), bottom 0 right 0 no-repeat url(./images/bg-pattern-bottom-desktop.svg);
+        height: 100vh;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 8rem 12rem 4rem 12rem;
+    }
+
+    .header {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .header__title {
+        text-align: start;
+        font-size: 2.5em;
+        padding: 0;
+        width: 70%;
+        margin-bottom: 1rem;
+    }
+
+    .header__content {
+        padding: 0;
+        text-align: start;
+        line-height: 2;
+        width: 85%;
+    }
+
+    .grade {
+        width: 50%;
+        margin-bottom: 0;
+        display:flex;
+    }
+
+    .grade-card {
+        display: flex;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+
+    .grade-card__stars {
+        margin-bottom:  0;
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
+
+    .grade-card--reviews {
+        align-self: flex-start;
+    }
+
+    .grade-card--reportGuru {
+        align-self: center;;
+    }
+
+    .grade-card--bestTech {
+        align-self: flex-end;
+    }
+    
+    .comments {
+        margin-top: 4rem;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .comments-card {
+        border-radius: 10px; 
+    }
+
+    .comments-card--colton {
+        margin-right: 1.5rem;
+    }
+
+    .comments-card--irene {
+        margin-right: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .comments-card--anne {
+        margin-top: 4rem;
+    }
+    
+}

@@ -1,0 +1,165 @@
+:root {
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+}
+
+body {
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+/* Mobile first*/
+
+.slide--hidden {
+    display: none;
+}
+
+.picture {
+    background: center / contain no-repeat url(/images/pattern-bg.svg);
+    margin: 1rem;
+    padding: 3.5rem 2rem 2.5rem 2rem;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+
+.button {
+    position: absolute;
+    cursor: pointer;
+    bottom: -1rem;
+    left: 35%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 9px 40px 0px rgba(89,32,238,0.27);
+}
+
+
+.button__prev {
+    padding: .3rem 1rem .3rem 1rem;
+}
+
+.button__next {
+    padding: .3rem 1rem .3rem 1rem;
+}
+
+.content {
+    background: top 0 center / 18% no-repeat url(/images/pattern-quotes.svg),
+    bottom 0 left 0 / 65% no-repeat url(/images/pattern-curve.svg);
+    font-size: 16px; 
+    padding: 2rem 2rem 4rem 2rem;  
+}
+
+.content__quote {
+    text-align: center;
+    padding: 0.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.content__infos {
+    text-align: center;
+}
+
+.content__author {
+    color: var(--dark-blue);
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.content__job {
+    color: var(--grayish-blue);
+    font-weight: 500;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    padding: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*  desktop */
+@media (min-width: 1440px) {
+
+    .slide {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .slide--hidden {
+        display: none;
+    }
+
+    .picture {
+        width: 50%;
+        height: auto;
+        position: relative;
+        margin: 0rem;
+        margin-right: 3rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .imgContainer {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .authorImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .button {
+        bottom: 2rem;
+        left: 20%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0px 9px 40px 0px rgba(89,32,238,0.27);
+    }
+    
+
+    .content {
+        background: top 0 center / 22% no-repeat url(/images/pattern-quotes.svg),
+        bottom 0 left 0 / 100% no-repeat url(/images/pattern-curve.svg);
+        width: 40%;
+        margin-top: 16rem;
+        padding-left: 8rem;
+        padding-right: 0;
+        padding-top: 4rem;
+        position: relative;
+        font-size: 1em;
+    }
+
+    .content__quote {
+        text-align: start;
+        width: 160%;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+    }
+
+    .content__infos {
+        display: flex;
+        text-align: start;
+        font-size: 18px;
+    }
+
+    .content__author {
+        margin-right: 1rem;
+    }
+
+
+}
